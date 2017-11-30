@@ -193,3 +193,8 @@ pre {font-size:0.8em;}
 .scrollable {
     overflow: auto;
 }
+
+.action-btn {
+    margin-top: 20px;
+    margin-bottom: 10px; 
+}

@@ -56,10 +56,19 @@ export default React.createClass({
   },
 
 
+  createDeployment(e) {
+    e.preventDefault();
+    console.log('The link was clicked.');
+  },
+
+
   render() {
     return (
       <div>
-        <h1>{this.state.title}</h1>
+        <div className="container-fluid">
+          <h1 className="pull-left">{this.state.title}</h1>
+          <button className="btn btn-primary action-btn pull-right" onClick={this.createDeployment}>Create New</button>
+        </div>  
         {Object.keys(this.state.deploymentsByNamespace).map( namespace =>
           <div key={namespace} className="col-md-6">
             <h2>{namespace}</h2>
